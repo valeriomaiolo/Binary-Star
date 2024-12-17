@@ -40,6 +40,65 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-49",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 1603.0, 556.0, 31.0, 22.0 ],
+					"text" : "sig~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-45",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 1575.0, 607.0, 29.5, 22.0 ],
+					"text" : "+~"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1909.25, 104.0, 78.0, 22.0 ],
+					"text" : "s spaceBang"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 1909.25, 66.0, 41.0, 22.0 ],
+					"text" : "sel 32"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 4,
+					"outlettype" : [ "int", "int", "int", "int" ],
+					"patching_rect" : [ 1909.25, 27.0, 50.5, 22.0 ],
+					"text" : "key"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-236",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -1412,8 +1471,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 3,
 									"outlettype" : [ "bang", "bang", "int" ],
-									"patching_rect" : [ 50.0, 100.0, 41.0, 22.0 ],
-									"text" : "uzi 10"
+									"patching_rect" : [ 50.0, 100.0, 40.0, 22.0 ],
+									"text" : "uzi 4"
 								}
 
 							}
@@ -1424,8 +1483,8 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 50.0, 275.0, 68.0, 22.0 ],
-									"text" : "zl.group 10"
+									"patching_rect" : [ 50.0, 275.0, 61.0, 22.0 ],
+									"text" : "zl.group 4"
 								}
 
 							}
@@ -1957,8 +2016,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 523.0, 146.0, 121.0, 143.0 ],
-					"text" : "fluid.mlpregressor~ my-network @hiddenlayers 3 @activation 1 @outputactivation 1 @batchsize 1 @maxiter 1000 learnrate 0.1 @validation 0 @momentum 0.9"
+					"patching_rect" : [ 523.0, 146.0, 123.0, 143.0 ],
+					"text" : "fluid.mlpregressor~ my-network @hiddenlayers 3 @activation 1 @outputactivation 1 @batchsize 1 @maxiter 1000 @learnrate 0.1 @validation 0 @momentum 0.9"
 				}
 
 			}
@@ -2262,15 +2321,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-111", 0 ],
-					"source" : [ "obj-190", 0 ]
+					"destination" : [ "obj-231", 0 ],
+					"source" : [ "obj-190", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-231", 0 ],
-					"source" : [ "obj-190", 1 ]
+					"destination" : [ "obj-45", 0 ],
+					"source" : [ "obj-190", 0 ]
 				}
 
 			}
@@ -2425,6 +2484,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-3", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-12", 0 ],
 					"order" : 0,
 					"source" : [ "obj-30", 0 ]
@@ -2552,8 +2618,22 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-111", 0 ],
+					"source" : [ "obj-45", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-233", 0 ],
 					"source" : [ "obj-46", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 1 ],
+					"source" : [ "obj-49", 0 ]
 				}
 
 			}
@@ -2603,6 +2683,20 @@
 				"patchline" : 				{
 					"destination" : [ "obj-180", 0 ],
 					"source" : [ "obj-57", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-49", 0 ],
+					"source" : [ "obj-57", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"source" : [ "obj-6", 0 ]
 				}
 
 			}
@@ -2752,7 +2846,7 @@
 			}
  ],
 		"autosave" : 0,
-		"bgcolor" : [ 0.0, 0.0, 0.0, 1.0 ]
+		"bgcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 	}
 
 }
