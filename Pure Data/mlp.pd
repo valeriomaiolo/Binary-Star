@@ -116,9 +116,11 @@
 #X obj 496 941 text define paramsdata.txt;
 #X obj 133 378 fluid.mlpregressor mlp -hiddenlayers 5 -activation 1 -outputactivation 1 -batchsize 1 -maxiter 10000 -learnrate 0.1 -validation 0, f 42;
 #X msg 9 322 read ./test4.json;
-#X msg -6 370 write ./test1.json;
 #X obj 61 69 loadbang;
 #X msg 61 93 1;
+#X msg -6 370 write ./test7.json;
+#X obj 377 264 tgl 19 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 390 306 metro 80;
 #X connect 0 0 72 0;
 #X connect 2 0 56 0;
 #X connect 3 0 56 0;
@@ -180,6 +182,9 @@
 #X connect 70 0 3 0;
 #X connect 72 0 33 0;
 #X connect 73 0 72 0;
-#X connect 75 0 76 0;
-#X connect 75 0 73 0;
-#X connect 76 0 25 0;
+#X connect 74 0 75 0;
+#X connect 74 0 73 0;
+#X connect 75 0 25 0;
+#X connect 76 0 72 0;
+#X connect 77 0 78 0;
+#X connect 78 0 0 0;
